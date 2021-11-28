@@ -27,7 +27,7 @@ export default function UserFavorites() {
 
     useEffect(() => {
         getFavoriteExercises();
-    }, [favorites]);
+    }, [favorites, exercises]);
 
     const getExercises = async () => {
         setLoading(true);
