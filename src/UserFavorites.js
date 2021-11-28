@@ -20,16 +20,7 @@ export default function UserFavorites() {
 
     const [favoriteExercises, setFavoriteExercises] = useState([]);
 
-    window.onload = function () {
-        if (!window.location.hash) {
-            // @ts-ignore
-            window.location = window.location + '#loaded';
-            window.location.reload();
-        }
-    }
     useEffect(() => {
-        // @ts-ignore
-        window.onload();
         getExercises();
         getFavorites();
     }, []);
